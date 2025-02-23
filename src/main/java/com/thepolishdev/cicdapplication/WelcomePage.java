@@ -14,4 +14,9 @@ class WelcomePage {
     public String welcome() {
         return welcomeMessage;
     }
+
+    @GetMapping("/anotherController")
+    public String welcome2() {
+        return "test-me-up";
+    }
 }
