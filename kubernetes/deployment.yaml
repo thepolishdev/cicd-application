@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cicd-application
-        image: cicd-application
+        image: pzajko/cicd-application
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

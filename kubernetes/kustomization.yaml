@@ -7,5 +7,5 @@ resources:
 - configmap.yaml
 
 images:
-- name: cicd-application
+- name: pzajko/cicd-application
   newTag: 0.0.2
