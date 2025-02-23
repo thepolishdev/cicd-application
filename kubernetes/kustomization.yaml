@@ -8,4 +8,4 @@ resources:
 
 images:
 - name: pzajko/cicd-application
-  newTag: 0.0.3
+  newTag: 0.0.4
