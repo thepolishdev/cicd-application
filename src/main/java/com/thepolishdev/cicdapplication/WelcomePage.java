@@ -15,6 +15,11 @@ class WelcomePage {
         return welcomeMessage;
     }
 
+    @GetMapping("/hello1")
+    public String welcome3() {
+        return "test-me-up";
+    }
+
     @GetMapping("/anotherController")
     public String welcome2() {
         return "test-me-up";

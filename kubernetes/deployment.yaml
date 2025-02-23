@@ -17,7 +17,7 @@ spec:
       containers:
       - name: cicd-application
         image: cicd-application
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         envFrom:
