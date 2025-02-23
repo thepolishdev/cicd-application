@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: cicd-application
-        image: cicd-application:${VERSION}
+        image: cicd-application
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
-        env:
-          - name: WELCOME_MESSAGE
-            value: ${WELCOME_MESSAGE}
+        envFrom:
+        - configMapRef:
+            name: app-config

@@ -9,6 +9,7 @@ spec:
     repoURL: https://github.com/thepolishdev/cicd-application.git
     targetRevision: HEAD
     path: kubernetes
+    kustomize: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: default
