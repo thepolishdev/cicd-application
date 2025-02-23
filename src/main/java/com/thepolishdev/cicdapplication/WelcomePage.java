@@ -25,6 +25,11 @@ class WelcomePage {
         return "somethingup";
     }
 
+    @GetMapping("/m1")
+    public String m1() {
+        return "m1";
+    }
+
     @GetMapping("/anotherController")
     public String welcome2() {
         return "test-me-up";
