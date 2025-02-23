@@ -7,8 +7,6 @@ resources:
 - configmap.yaml
 
 labels:
-  - pairs:
-      - key: app
-        value: cicd-application
-      - key: env
-        value: dev
+- pairs:
+    app: cicd-application
+  includeSelectors: true

@@ -6,6 +6,11 @@ namespace: prod
 resources:
 - ../../base
 
+labels:
+- pairs:
+    environment: prod
+  includeSelectors: true
+
 images:
 - name: pzajko/cicd-application
   newTag: 0.0.5-prod

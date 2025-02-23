@@ -7,11 +7,9 @@ resources:
 - ../../base
 
 labels:
-  - pairs:
-      - key: app
-        value: cicd-application
-      - key: env
-        value: dev
+- pairs:
+    environment: dev
+  includeSelectors: true
 
 images:
 - name: pzajko/cicd-application
