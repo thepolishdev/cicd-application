@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: cicd-application
+welcome.message: Hello World

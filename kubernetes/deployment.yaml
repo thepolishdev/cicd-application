@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-application
+  labels:
+    app: cicd-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cicd-application
+  template:
+    metadata:
+      labels:
+        app: cicd-application
+    spec:
+      containers:
+      - name: cicd-application
+        image: cicd-application:${VERSION}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+          - name: WELCOME_MESSAGE
+            value: ${WELCOME_MESSAGE}
