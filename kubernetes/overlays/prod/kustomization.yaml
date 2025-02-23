@@ -8,7 +8,7 @@ resources:
 
 images:
 - name: pzajko/cicd-application
-  newTag: 0.0.5
+  newTag: 0.0.5-prod
 
 patches:
 - patch: |-
