@@ -1,0 +1,24 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: prod
+
+resources:
+- ../../base
+
+images:
+- name: pzajko/cicd-application
+  newTag: 0.0.5
+
+patches:
+- patch: |-
+    - op: replace
+      path: /data/WELCOME_MESSAGE
+      value: "Welcome to Production Environment!"
+  target:
+    kind: ConfigMap
+    name: app-config
+
+replicas:
+- name: cicd-application
+  count: 2 
