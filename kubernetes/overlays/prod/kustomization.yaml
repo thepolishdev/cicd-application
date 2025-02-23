@@ -5,6 +5,7 @@ namespace: prod
 
 resources:
 - ../../base
+- configmap.yaml
 
 labels:
 - pairs:
@@ -14,15 +15,6 @@ labels:
 images:
 - name: pzajko/cicd-application
   newTag: 0.0.5-prod
-
-patches:
-- patch: |-
-    - op: replace
-      path: /data/WELCOME_MESSAGE
-      value: "Welcome to Production Environment!"
-  target:
-    kind: ConfigMap
-    name: app-config
 
 replicas:
 - name: cicd-application

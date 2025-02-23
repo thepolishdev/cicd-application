@@ -5,6 +5,7 @@ namespace: dev
 
 resources:
 - ../../base
+- configmap.yaml
 
 labels:
 - pairs:
@@ -15,15 +16,6 @@ images:
 - name: pzajko/cicd-application
   newTag: 0.0.5-dev
 
-patches:
-- patch: |-
-    - op: replace
-      path: /data/WELCOME_MESSAGE
-      value: "Welcome to Development Environment!"
-  target:
-    kind: ConfigMap
-    name: app-config
-
 replicas:
 - name: cicd-application
-  count: 1 
+  count: 1
