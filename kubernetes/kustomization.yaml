@@ -8,4 +8,4 @@ resources:
 
 images:
 - name: cicd-application
-  newTag: 0.0.1 
+  newTag: 0.0.2

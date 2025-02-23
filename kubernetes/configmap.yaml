@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  VERSION: "0.0.1"
-  WELCOME_MESSAGE: "Welcome to CICD Application!" 
+  WELCOME_MESSAGE: "Welcome to CICD Application!"
