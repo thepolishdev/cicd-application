@@ -20,6 +20,11 @@ class WelcomePage {
         return "test-me-up";
     }
 
+    @GetMapping("/something")
+    public String welcome4() {
+        return "somethingup";
+    }
+
     @GetMapping("/anotherController")
     public String welcome2() {
         return "test-me-up";
